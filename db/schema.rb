@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_10_03_224549) do
     t.text "date"
     t.integer "runtime_length"
     t.integer "comedian_id"
+    t.text "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

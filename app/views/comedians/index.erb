@@ -1,0 +1,13 @@
+<% @comedians.each do |com| %>
+  <ul>
+    <li> <%= com.name %> </li>
+    <li>Age: <%= com.age %> </li>
+    <li>City: <%= com.city %> </li>
+    <li>Specials: <%= com.specials.each do |spec| %>
+      <% require 'pry'; binding.pry %>
+      <li> <%= spec.name %> </li>
+    <% end %>
+    </li>
+  </ul>
+
+<% end %>
