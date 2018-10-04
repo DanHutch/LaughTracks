@@ -1,13 +1,32 @@
-<% @comedians.each do |com| %>
+<div id="statistics">
+  <h2> Statistics </h2>
   <ul>
-    <li> <%= com.name %> </li>
-    <li>Age: <%= com.age %> </li>
-    <li>City: <%= com.city %> </li>
-    <li>Specials: <%= com.specials.each do |spec| %>
-      <% require 'pry'; binding.pry %>
-      <li> <%= spec.name %> </li>
-    <% end %>
+    <li>Average Comedian Age: <%= @comedians.avg_age %> </li>
+    <li>Average Special Runtime: <%= @specials.avg_runtime_length %> </li>
+    <li>Cities:
+      <ul> <% @comedians.unique_cities.each do |city| %>
+        <li> <%= city %> </li>
+      <% end %>
+      </ul>
     </li>
   </ul>
+</div>
 
-<% end %>
+<div id="comedians">
+  <h2> Comedians </h2>
+  <% @comedians.each do |com| %>
+  <%= com.name %>
+    <ul>
+      <li>Age: <%= com.age %> </li>
+      <li>City: <%= com.city %> </li>
+      <li>Specials:
+        <ul> <% com.specials.each do |spec| %>
+          <li> <%= spec.name %> </li>
+          <img src=" <%= spec.image_url %> " class="img" alt=" <%= spec.name %> image ">
+        <% end %>
+        </ul>
+      </li>
+      <li> <%= com.specials.count %> </li>
+    </ul>
+  <% end %>
+</div>
