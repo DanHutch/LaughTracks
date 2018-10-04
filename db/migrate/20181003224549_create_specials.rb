@@ -5,6 +5,7 @@ class CreateSpecials < ActiveRecord::Migration[5.2]
       t.text :date
       t.integer :runtime_length
       t.integer :comedian_id
+      t.text :image_url
 
       t.timestamps null: false
     end
