@@ -10,4 +10,9 @@ class LaughTracksApp < Sinatra::Base
     erb :"comedians/index"
   end
 
+  get '/comedians/new'
+    erb :new
+  end
+
+
 end

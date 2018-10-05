@@ -2,6 +2,8 @@
 database_name = "laugh-tracks-#{LaughTracksApp.environment}"
 db = URI.parse(ENV['DATABASE_URL'] || "postgres://localhost/#{database_name}")
 
+
+
 # connect ActiveRecord with the current database
 ActiveRecord::Base.establish_connection(
   :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,

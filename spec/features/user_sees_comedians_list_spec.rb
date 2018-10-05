@@ -8,6 +8,7 @@ RSpec.describe 'Comedian Index Page' do
           expect(page).to have_content(comedian.name)
           expect(page).to have_content(comedian.age)
           expect(page).to have_content(comedian.city)
+          expect(page).to have_content(comedian.specials.count)
         end
       end
       it "should show statistics at the top" do
