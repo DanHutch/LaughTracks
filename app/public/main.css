@@ -1,17 +1,64 @@
-/*
+body {
+  margin: 10px;
+}
+
+.main_section {
+  display: grid;
+  grid-template-columns: 8;
+  grid-template-rows: 5;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  background-color: #444
+}
+
+h1 {
+  display: flex;
+  grid-column: span 8;
+  grid-row: span 1;
+  align-content: center;
+  justify-content: center;
+}
+
+#stat_box{
+  display: flex;
+
+  grid-column: span 8;
+  grid-row: span 2;
+
+  background-color: white;
+  justify-content: center;
+  align-content: center;
+
+}
+
+h2 {
+  display: flex;
+  grid-column: span 8;
+  grid-row: span 1;
+  justify-content: center;
+}
+
 img {
   height: 75px;
   width: 50px;
-} */
+}
 
-/* .stats {
+.stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  height: 200px;
-  align-items: center;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(1, auto);
+  align-items: top;
 }
 
 #avg_age {
   grid-column: span 1;
-  text-align: center;
-} */
+  text-align: left;
+}
+
+#total_specials {
+  grid-column: span 1;
+}
