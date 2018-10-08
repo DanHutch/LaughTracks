@@ -1,4 +1,17 @@
+/*
 img {
   height: 75px;
   width: 50px;
+} */
+
+/* .stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 200px;
+  align-items: center;
 }
+
+#avg_age {
+  grid-column: span 1;
+  text-align: center;
+} */
